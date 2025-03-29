@@ -9,5 +9,15 @@ return {
       "nvim-telescope/telescope.nvim", -- For picking b/w different remote methods
     },
     config = true,
+    opts = {
+      remote = {
+        copy_dirs = {
+          config = {
+            base = vim.fn.stdpath("config"),
+            dirs = { "lua", "init.lua", "lazyvim.json", "lazy-lock.json", "stylua.toml" },
+          },
+        },
+      },
+    },
   },
 }
